@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+
+*{
+	box-sizing: border-box;
+}
+
+html {
+	--blue:#1E3264;
+	--blue-hover: #2A468D;
+	--green:#1DB964;
+	--green-hover:#1ED760;
+}
+/*Positionnement des blocs*/
+
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+
+.cta-button {
+	display: inline-block;
+	background-color: gray;
+	border-radius: 600px;
+	border:solid thin gray;
+	font-weight: 700;
+	text-decoration: none;
+	color: white;
+	padding: 1em 3em;
+	letter-spacing: 0.1em;
+	transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+	background-color: lightgray;
+	color: gray;
+	border-color: lightgray;
+}
+
+.cta-button--blue {
+	background-color: var(--blue);
+	border-color: var(--blue);
+}
+
+.cta-button--blue:hover {
+	background-color: var(--blue-hover);
+	border-color: var(--blue-hover);
+}
+
+.cta-button--white {
+	background-color: white;
+	border-color: var(--green);
+	color: var(--green);
+}
+
+.cta-button--green {
+	background-color: var(--green);
+	border-color: var(--green);
+}
+
+
+.cta-button--green:hover {
+	background-color: var(--green-hover);
+	border-color: var(--green-hover);
+	color: white;
+}
+
+.cta-button--white:hover {
+	background-color: var(--green-hover);
+	color:white;
+}
+body{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	background-color: rgba(0,0,0,0.5);
+	padding: 1rem 0;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#logo-link{
+	width: 140px;
+	line-height: 0;
+}
+
+
+header nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+
+header nav li a{
+	text-decoration: none;
+	padding: 0.5em;
+	display: block;
+	color: white;
+}
+
+
+/*SECTION1*/
+
+#section1{
+	height: 640px;
+	background-image: url('assets/images/hero-image.jpg');
+	background-size: cover;
+	background-position: center right;
+	padding-bottom: 20px;
+	color: white;
+}
+
+#section1 h1{
+	font-size: 96px;
+	margin: 0;
+}
+#section1 h2{
+	font-size: 30px;
+}
+
+
+#section1 .container{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#section1 footer{
+	text-align: center;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+#section1 .container div{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+#section1 h1{
+}
+
+
+
+
+#section2{
+	background-color: #008cda;
+}
+
+#section2 .container{
+	display: flex;
+	flex-direction: column;
+}
+
+#section2 .container > h1{
+	text-align: center;
+}
+
+#section2 .container div{
+	display: flex;
+}
+
+.benefit{
+	padding: 30px;
+	width: 25%;
+	text-align: center;
+}
+
+
+#section3{
+	background-color: #006ba6;
+	padding-bottom: 20px;
+}
+
+#section3 .container{
+	display: flex;
+	flex-direction: column;
+}
+
+#section3 .container > h1{
+	text-align: center;
+}
+
+.offers-container{
+	width: 70%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.offer{
+	width: 48%;
+}
+
+
+#section3 footer{
+	text-align: center;
+}
+
+
+
+body > footer {
+	padding: 1rem 0;
+}
+
+body > footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+body > footer ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+body > footer li a{
+	padding: 0.5em;
+	display: block;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
