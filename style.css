@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
 
+
+@keyframes fadeIn {
+	from{opacity: 0;transform: translateY(100%);}
+	to{opacity: 1;transform: translateY(0);}
+}
+
 *{
 	box-sizing: border-box;
 }
@@ -9,6 +15,10 @@ html {
 	--blue-hover: #2A468D;
 	--green:#1DB964;
 	--green-hover:#1ED760;
+}
+
+a {
+	color: currentColor;
 }
 /*Positionnement des blocs*/
 
@@ -158,6 +168,9 @@ header nav li a{
 	align-items: flex-start;
 }
 
+#section1 .cta-button {
+	animation: fadeIn 1s;
+}
 
 #section2{
 	background-color: white;
@@ -194,7 +207,7 @@ header nav li a{
 
 #section3{
 	background-color: #F8F8F8;
-	padding-bottom: 20px;
+	padding-bottom: 40px 0;
 }
 
 #section3 .container{
@@ -212,6 +225,8 @@ header nav li a{
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 .offer{
@@ -222,14 +237,21 @@ header nav li a{
 	box-shadow: 0 0 8px rgba(0,0,0,0.2);
 	display: flex;
     flex-direction: column;
+	position: relative;
+	transition: all 0.5s;
+	top: 0;
+	cursor: pointer;
 }
 
 .offer h1 {
 	font-size: 24px;
+	margin: 0;
+	font-weight: 48px;
 }
 
 .offer h2 {
 	font-size: 32px;
+	margin: 0;
 }
 
 .offer h2 small {
@@ -256,6 +278,13 @@ header nav li a{
 }
 
 
+.offer:hover {
+	
+	/*transform: translateY(-10px);*/
+	top: -10px;
+	box-shadow: 0 0 24px rgba(0,0,0,0.2);
+}
+
 #section3 footer{
 	text-align: center;
 }
@@ -264,6 +293,8 @@ header nav li a{
 
 body > footer {
 	padding: 1rem 0;
+	background-color: black;
+	color: white;
 }
 
 body > footer .container {
@@ -286,8 +317,20 @@ body > footer li a{
 }
 
 
+/* Responsive */
+
+@media screen and (max-width: 1000px) {
+
+	header {
+		display: none;
+	}
+
+	#section1 h1 {
+		font-size: 60px;
+	}
 
 
+}
 
 
 
