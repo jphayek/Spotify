@@ -20,6 +20,12 @@ html {
 a {
 	color: currentColor;
 }
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
 /*Positionnement des blocs*/
 
 .container{
@@ -107,10 +113,32 @@ img{
 }
 
 #logo-link{
+	z-index: 10;
 	width: 140px;
 	line-height: 0;
 }
 
+
+#menu-button {
+	z-index: 10;
+	display: none;
+	width: 2rem;
+	height: 2rem;
+
+}
+
+#menu-button::before {
+	content: '';
+	background-image: url(assets/images/Hamburger_icon.svg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	
+	
+}
 
 header nav ul{
 	list-style: none;
@@ -321,13 +349,80 @@ body > footer li a{
 
 @media screen and (max-width: 1000px) {
 
-	header {
-		display: none;
+	.container {
+		padding: 0 30px;
 	}
+
+	header {
+		/*display: none;*/
+		background-color: transparent;
+	}
+
+
+	#menu-button svg path {
+		fill: white;
+	}
+
+	header nav {
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--blue);
+		color: white;
+		position: absolute;
+		top: 0;
+		left:100%;
+		transition: left 1s;
+	}
+
+	header nav.open {
+		left: 0;
+	}
+
+	header nav ul {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	
+	#menu-button {
+		display: block;
+	}
+
+
 
 	#section1 h1 {
 		font-size: 60px;
 	}
+
+	#section2 .container div {
+		flex-direction: column;
+	}
+
+	.benefit {
+		width: 100%;
+	}
+
+	.offers-container {
+		flex-direction: column;
+		width: 100%;
+		gap: 30px;
+	}
+
+	.offer {
+		width: 100%;
+	}
+
+	.offer + .offer { /* Appliquer le padding sur une seule partie */
+		margin-top: 20px;
+	}
+
+	body > footer ul{
+		flex-direction: column;
+		align-items: center;
+	}
+
 
 
 }
